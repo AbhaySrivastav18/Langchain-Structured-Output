@@ -11,7 +11,9 @@ class Review(TypedDict):
 
 structuredModel = model.with_structured_output(Review)
 
+
 res = structuredModel.invoke("""The hardware is great,but the software feels bloated.There are too many preinstalled apps that i can't remove.Also, the UI looks outdated compared to other brands. Hoping for a software update to fix this.""")
 print(res)
 print(res['summary'])
 print(res['sentiment'])
+
